@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Document type:</strong>
+  <%= @bank.document_type %>
+</p>
+
+<p>
+  <strong>Document number:</strong>
+  <%= @bank.document_number %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @bank.bank_type %>
+</p>
+
+<p>
+  <strong>Bank info:</strong>
+  <%= render @bank.bank_type %>
+</p>
+
+<%= link_to 'Edit', edit_bank_path(@bank) %> |
+<%= link_to 'Back', banks_path %>

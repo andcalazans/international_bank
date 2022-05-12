@@ -1,0 +1,22 @@
+<%= hidden_field_tag 'bank[account_type]', :corrente %>
+<%= hidden_field_tag 'bank[document_type]', :passport %>
+
+<div class="field form-group">
+  <%= form.label :document_number, 'Passport Number' %>
+  <%= form.text_field :document_number %>
+</div>
+
+<div class="field form-group">
+  <%= form.label :nipc %>
+  <%= form.text_field :nipc %>
+</div>
+
+<div class="field form-group">
+  <%= form.label :iban %>
+  <%= form.text_field :iban %>
+</div>
+
+<div class="field form-group">
+  <%= form.label :swift_code %>
+  <%= form.text_field :swift_code %>
+</div>

@@ -1,0 +1,35 @@
+<!-- Form-->
+<div class="form">
+    <div class="form-toggle"></div>
+    <div class="form-panel one">
+        <div class="form-header">
+            <h1>New bank</h1>
+        </div>
+        <div class="form-content">
+
+          <%= form_with(model: bank) do |form| %>
+            <% if bank.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(bank.errors.count, "error") %> prohibited this bank from being saved:</h2>
+
+                <ul>
+                  <% bank.errors.each do |error| %>
+                    <li><%= error.full_message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+
+            <%= hidden_field_tag 'bank[bank_type]', @country %>
+
+            <div class='international-bank'>
+              <%= selected_bank(@country, form) %>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Create Bank</button>
+            </div>
+          <% end %>
+        </div>
+    </div>
+</div>

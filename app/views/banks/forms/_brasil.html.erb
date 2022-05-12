@@ -1,0 +1,26 @@
+<%= hidden_field_tag 'bank[account_type]', :corrente %>
+
+<div class="field form-group">
+  <%= form.label :document_type %>
+  <%= form.select :document_type, Bank.document_types.slice(*[:cpf, :cnpj]).keys.to_a, id: 'select_bank_type' %>
+</div>
+
+<div class="field form-group">
+  <%= form.label :document_number %>
+  <%= form.text_field :document_number %>
+</div>
+
+<div class="field form-group">
+  <%= form.label :bank_number %>
+  <%= form.text_field :bank_number %>
+</div>
+
+<div class="field form-group">
+  <%= form.label :account_number %>
+  <%= form.text_field :account_number %>
+</div>
+
+<div class="field form-group">
+  <%= form.label :account_digit %>
+  <%= form.text_field :account_digit %>
+</div>
